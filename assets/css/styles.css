@@ -1,0 +1,100 @@
+@import url('/assets/css/reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Roboto:wght@100;300;500;700&display=swap');
+
+
+
+/* GENERIC STYLES */
+:root{
+    --primary-color: #f0f0f0;
+
+    --primary-bg-color: #111217;
+    --secondary-bg-color: #28292e;    
+    --border-color: #28292e;
+
+    --title-color: #9a9a9c;
+    --text-color: #9a9a9c;
+    --link-color: #9a9a9c;
+    --icon-color: #c7c8c9;
+
+    font-size: 16px;
+}
+
+body{
+    background: var(--primary-bg-color);
+    font-family: 'Karla', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    padding: .5rem 1rem;
+}
+
+i{
+    color: var(--icon-color);
+}
+
+/* HEADER STYLES */
+.header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.header__brand .brand__logo{
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+#toggleTheme{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* MENU STYLES */
+.menu{
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+}
+
+.menu__item{
+    width: 100%;
+}
+
+.menu--mobile{
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+
+.menu--mobile .menu__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.menu__icon, .menu__text{
+    color: var(--text-color);
+}
+
+.menu__link.active .menu__icon, 
+.menu__link.active .menu__text{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.menu__icon{
+    font-size: 1.5rem;
+}
+
+.menu__text{
+    font-size: .75rem;
+    text-transform: uppercase;
+}
